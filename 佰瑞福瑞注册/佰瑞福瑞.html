@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<!-- saved from url=(0033)https://www.aiduigui.com/register -->
+<html lang="en" xmlns:layout="https://www.ultraq.net.nz/web/thymeleaf/layout" layout:decorate="common/layout"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>佰瑞福瑞</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--===============================================================================================-->
+    <link rel="icon" type="image/png" href="https://www.aiduigui.com/images/icons/favicon.ico">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="./佰瑞福瑞_files/bootstrap.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="./佰瑞福瑞_files/font-awesome.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="./佰瑞福瑞_files/icon-font.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="./佰瑞福瑞_files/animate.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="./佰瑞福瑞_files/hamburgers.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="./佰瑞福瑞_files/animsition.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="./佰瑞福瑞_files/select2.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="./佰瑞福瑞_files/daterangepicker.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="./佰瑞福瑞_files/util.css">
+    <link rel="stylesheet" type="text/css" href="./佰瑞福瑞_files/main.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="./佰瑞福瑞_files/element.css">
+    <style>
+        [v-cloak] {
+            display: none;
+        }
+    </style>
+    <!--===============================================================================================-->
+</head>
+<body>
+
+<div id="app" class="limiter"><div class="container-login100" style="background-image: url(&quot;image/bg-01.jpg&quot;);"><div class="wrap-login100 p-l-110 p-r-110 p-t-62 p-b-33"><form class="login100-form validate-form flex-sb flex-w"><span class="login100-form-title p-b-53">
+						免费注册
+					</span> <a href="佰瑞福瑞注册个人版.htm" class="btn-face">
+                    个人版
+                </a> <a class="btn-face current">
+                    机构版
+                </a> <div class="p-t-31 p-b-9"><span class="txt1">
+							手机号
+						</span></div> <div data-validate="请填入手机号！" class="wrap-input100 validate-input"><input type="text" name="phoneNumber" class="pass-text-input-txt"> <span class="focus-input100"></span></div> <div class="p-t-13 p-b-9"><span class="txt1">
+							验证码
+						</span></div> <div data-validate="请填入验证码！" class="wrap-input100 validate-input"><input type="text" name="password" placeholder="请输入验证码" class="pass-text-input pass-text-input-smsVerifyCode"> <span class="pass-clearbtn pass-clearbtn-smsVerifyCode" style="display: none; visibility: hidden;"></span> <button type="button" class="pass-item-timer-val">重新发送验证码</button> <span class="focus-input100"></span></div> <div class="m-t-20 m-b-6 txt2"><input type="checkbox"> <span>
+               				 我已阅读并同意 <span style="color: rgb(98, 139, 235); cursor: pointer;">「隐私政策」</span>和<span id="note2" style="color: rgb(98, 139, 235); cursor: pointer;">「用户协议」</span></span></div> <div class="container-login100-form-btn m-t-17"><button type="button" class="login100-form-btn">
+                        注册
+                    </button></div> <div class="w-full text-center p-t-55"><span class="txt2">
+							已有账号?
+						</span> <a href="../佰瑞福瑞登录/佰瑞福瑞登录/佰瑞福瑞登录.htm" class="txt2 bo1" style="cursor: pointer;">
+                        立即登录
+                    </a></div></form></div></div></div>
+
+
+<!--<div id="dropDownSelect1"></div>-->
+
+<!--===============================================================================================-->
+<script src="./佰瑞福瑞_files/jquery-3.2.1.min.js.下载"></script>
+<!--===============================================================================================-->
+<script src="./佰瑞福瑞_files/animsition.min.js.下载"></script>
+<!--===============================================================================================-->
+<script src="./佰瑞福瑞_files/popper.js.下载"></script>
+<script src="./佰瑞福瑞_files/bootstrap.min.js.下载"></script>
+<!--===============================================================================================-->
+<script src="./佰瑞福瑞_files/select2.min.js.下载"></script>
+<!--===============================================================================================-->
+<script src="./佰瑞福瑞_files/moment.min.js.下载"></script>
+<script src="./佰瑞福瑞_files/daterangepicker.js.下载"></script>
+<!--===============================================================================================-->
+<script src="./佰瑞福瑞_files/countdowntime.js.下载"></script>
+<!--===============================================================================================-->
+<script src="./佰瑞福瑞_files/main.js.下载"></script>
+
+<script src="./佰瑞福瑞_files/encAndDecUrl.js.下载"></script>
+<script src="./佰瑞福瑞_files/vue.js.下载" type="text/javascript" charset="utf-8"></script>
+<script src="./佰瑞福瑞_files/element.js.下载"></script>
+<script src="./佰瑞福瑞_files/axios.min.js.下载"></script>
+
+
+<script>
+    new Vue({
+        el: '#app',
+        data() {
+            return {
+                // 目前的选择类型
+                currentType: 'person',
+                account: {
+                    phoneNumber: '',
+                    userName: '',
+                    password: 123456,
+                },
+                userPolicy: true,
+                verShow: false,
+                timer: 60,
+                content: '获取验证码',
+                correct: true, //前置条件判断
+            }
+        },
+        methods: {
+            register() {
+                if (!this.userPolicy) {
+                    this.$message.error("请勾选隐私政策与用户协议！")
+                    return false
+                }
+                // 短信验证码登录
+                if (this.account.phoneNumber !== '' && this.account.validateCode !== '' && this.userPolicy && this.account.password !== '') {
+                    let data = new FormData()
+                    // data = this.account
+                    data.append("phone", this.account.phoneNumber)
+                    data.append("captcha", this.account.validateCode)
+                    data.append("password", this.account.password)
+                    data.append("userType", this.currentType)
+                    axios.post("apply",data).then(res => {
+                        if (res.data.resultCode === "0") {
+                            this.$confirm('账号注册成功, 请留意短信通知！是否转去登录?', '提示', {
+                                confirmButtonText: '确定',
+                                cancelButtonText: '取消',
+                                type: 'warning'
+                            }).then(() => {
+                                window.location.href = '/login'
+                            }).catch(() => {
+                                this.$message({
+                                    type: 'info',
+                                    message: '已取消'
+                                });
+                                return false
+                            });
+
+                        } else {
+                            this.$message.error("您的验证码不正确")
+                        }
+                    })
+                } else {
+                    if (this.account.phoneNumber === '') {
+                        this.$message.error("请填入手机号！")
+                        return
+                    }
+                    if (this.account.validateCode === '') {
+                        this.$message.error("请输入验证码！")
+                        return
+                    }
+                    if (this.account.validateCode === '') {
+                        this.$message.error("请输入密码！")
+                        return
+                    }
+                }
+
+            },
+            // 输入框自动失去焦点
+            completeInput(e) {
+                if (this.account.phoneNumber.length === 11) {
+                    e.srcElement.blur(); //输入框主动失去焦点
+                } else {
+                    this.verShow = true
+                }
+            },
+            sendValidateCode() {
+                this.verShow = true
+                let valid = true
+                valid = this.validatePhone()
+                console.log("valid", valid)
+
+                if (!valid) {
+                    this.verShow = false
+                    return
+                } else {
+                    axios.post('/verifyPhone/' + this.account.phoneNumber).then(res => {
+                        // debugger
+                        if (res.data.resultCode === '1001') {
+                            this.verShow = false
+                            this.$confirm('当前手机号已注册！, 是否转去登录?', '提示', {
+                                confirmButtonText: '确定',
+                                cancelButtonText: '取消',
+                                type: 'warning'
+                            }).then(() => {
+                                window.location.href = '/login'
+                            }).catch(() => {
+                                this.$message({
+                                    type: 'info',
+                                    message: '已取消'
+                                });
+                            });
+                        } else {
+                            if (this.correct) {
+                                let data = new FormData()
+                                data.append("phone", this.account.phoneNumber)
+                                axios.post("/captcha", data).then(res => {
+                                    if (res.data.resultCode === "0") {
+                                        this.$message.success(res.data.resultMesg)
+                                        let auth_timer = setInterval(async ()=>{
+                                            this.timer--
+                                            this.content = this.timer-- + 's后重新发送'
+                                            if(this.timer<=0) {
+                                                clearInterval(auth_timer)
+                                                this.content = '重新发送验证码'
+                                                this.timer = 60
+                                                this.verShow = false
+                                            }
+
+                                        },1000)
+                                    }
+                                    else {
+                                        this.verShow = false
+                                        this.$message.error(res.data.resultMesg)
+                                    }
+                                })
+                            }
+                            else {
+                                this.verShow = false
+                            }
+                        }
+                    })
+                }
+
+
+            },
+            jumpTo(val) {
+                if (val === '1') {
+                    window.location.href = "yinsezhengce.html"
+                }
+                if (val === '2') {
+                    window.location.href = "userxieyi.html"
+                }
+                if (val === '3') {
+                    window.location.href = "login"
+                }
+            },
+            validatePhone() {
+                if (this.account.phoneNumber === '') {
+                    this.$message.error("手机号格式不正确")
+                    return false
+                }
+                // debugger
+                 else if (!/^((1[3,5,8,7,9][0-9])|(14[5,7])|(17[0,6,7,8])|(16[2,5,6,7,9])|(19[1,7]))\d{8}$/.test(this.account.phoneNumber)) {
+                    this.$message.error("手机号格式不正确")
+                    this.correct = false
+                    return false
+                }
+                else {
+                    return true
+                }
+
+            },
+        }
+    })
+</script>
+<style>
+
+</style>
+</body></html>
